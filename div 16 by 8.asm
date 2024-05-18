@@ -1,0 +1,11 @@
+;----16 BIT DIVISION BY A  8 BIT NUMBER STORED IN 10500 & 10502 RESULT STORED IN 10600 & REMAINDER IN 10602 
+MOV AX, 1000H       
+MOV DS, AX
+MOV SI, 0500H       
+MOV DI, 0600H       
+MOV AX, [SI]        
+MOV BL, [SI+2]      
+DIV BX              
+MOV [DI], AX
+MOV [DI+2],DX        
+HLT                 
